@@ -4,6 +4,8 @@ import torch
 from lib import *
 
 
+# Norm: Chuẩn hóa để tính ra một đại lượng biểu diễn độ lớn của một vector
+# L2Norm: Euclid distance
 class L2Norm(nn.Module):
     def __init__(self, in_channels=512, scale=20):
         super(L2Norm, self).__init__()
@@ -18,8 +20,9 @@ class L2Norm(nn.Module):
     def forward(self, x):
         # x.size() = (batch_size, channel, height, weight)
         norm = x.pow(2).sum(dim=1, keepdim=True).sqrt() + self.eps
+        # norm trên từng layer
         x = torch.div(x, norm)
         # weight.size() = (512) -> (1,512,1,1)
         weights = self.weight.unsqueeze(0).unsqueeze(2).unsqueeze(3).expand_as(x)
-
+        # norm trên toàn bộ layer
         return weights * x
