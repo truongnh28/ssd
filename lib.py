@@ -17,10 +17,10 @@ from matplotlib import pyplot as plt
 import itertools
 from math import sqrt
 import time
+import warnings
 
 torch.manual_seed(1234)
 np.random.seed(1234)
 random.seed(1234)
 
-import warnings
 warnings.filterwarnings("ignore")
