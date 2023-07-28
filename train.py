@@ -35,7 +35,7 @@ train_dataset = MyDataset(train_img_list, train_anno_list, phase="train",
 val_dataset = MyDataset(val_img_list, val_anno_list, phase="val",
                         transform=DataTransform(input_size, color_mean), anno_xml=Anno_xml(classes))
 
-batch_size = 32
+batch_size = 40
 train_dataloader = data.DataLoader(train_dataset, batch_size, shuffle=True, collate_fn=my_collate_fn)
 val_dataloader = data.DataLoader(val_dataset, batch_size, shuffle=False, collate_fn=my_collate_fn)
 dataloader_dict = {"train": train_dataloader, "val": val_dataloader}
