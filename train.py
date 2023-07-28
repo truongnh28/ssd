@@ -113,7 +113,7 @@ def train_model(net, data_loader_dict, criterion, optimizer, num_epochs):
                             time_iter_end = time.time()
                             duration = time_iter_end - time_iter_start
                             print(
-                                "Iteration {} || Loss: {:.4f || 5iter: {:.4f}".format(iteration, loss.item(), duration))
+                                "Iteration {} || Loss: {:.4f || iter: {:.4f}".format(iteration, loss.item(), duration))
 
                             time_iter_start = time.time()
 
