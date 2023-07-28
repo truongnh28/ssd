@@ -8,3 +8,8 @@ cfgs = {
     "max_size": [60, 111, 162, 213, 264, 315],
     "aspect_ratios": [[2], [2, 3], [2, 3], [2, 3], [2], [2]],
 }
+
+classes = ["aeroplane", "bicycle", "bird", "boat", "bottle",
+           "bus", "car", "cat", "chair", "cow", "diningtable",
+           "dog", "horse", "motorbike", "person", "pottedplant",
+           "sheep", "sofa", "train", "tvmonitor"]
