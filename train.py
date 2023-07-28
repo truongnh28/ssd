@@ -15,8 +15,8 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # torch.backends.cudnn.benchmark = True
 
 # dataloader
-# root_path = "./data/VOCdevkit/VOC2012"
-root_path = "/Users/lap13954/PTIT/final/dataset/VOCdevkit/VOC2012/"
+root_path = "./data/VOCdevkit/VOC2012"
+# root_path = "/Users/lap13954/PTIT/final/dataset/VOCdevkit/VOC2012/"
 train_img_list, train_anno_list, val_img_list, val_anno_list = make_data_path_list(root_path)
 
 classes = ["aeroplane", "bicycle", "bird", "boat", "bottle",
